@@ -9,7 +9,42 @@ html {
 body {
     background-color: #fff;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 20%;
 }
 h1, h2, h3 {
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+menu {
+    color: #EB5428;
+}
+menu li, #social li { 
+    display: inline-block;
+}
+li a {
+    text-decoration: none;
+    color: #EB5428;
+    font-family: 'Bebas Neue', cursive;
+}
+#lrgTacos {
+    width: 100%;
+}
+#ingredients li {
+    list-style: square;
+    line-height: 2em;
+}
+#dishes {
+    background-color: #7ABFBF;
+}
+#dishes section {
+    display: flex;
+    padding-bottom: 30px;
+}
+footer {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+}
+footer img {
+    width: 20%;
 }
