@@ -15,11 +15,54 @@ h1, h2, h3 {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
 }
+h1 {
+    font-size: 40px;;
+}
+h2 {
+    font-size:30px;
+}
+h3 {
+    font-size: 20px;
+}
+nav a {
+    font-size:20px;
+}
+p {
+    font-size:16px;
+}
+dl {
+    background-color: greenyellow;
+    width:50%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3px;
+}
+dt {
+    background-color:magenta;
+    font-size:16px;
+    width: max-content;
+}
+dd {
+    background-color: aqua;
+    font-size: 16px;
+}
+.hamburger {
+    position: absolute;
+    margin-top: 0;
+}
+.hamburger ul li {
+    display: inline;
+}
+.hamburger svg, .hamburger img {
+    background-color: teal;
+    width: 10%;
+}
 menu {
     color: #EB5428;
 }
 menu li, #social li { 
     display: inline-block;
+    font-size: 20px;
 }
 li a {
     text-decoration: none;
@@ -27,7 +70,7 @@ li a {
     font-family: 'Bebas Neue', cursive;
 }
 #lrgTacos {
-    width: 100%;
+    width:100%;
 }
 #ingredients li {
     list-style: square;
@@ -44,6 +87,7 @@ footer {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
+    font-size:20px;
 }
 footer img {
     width: 20%;
