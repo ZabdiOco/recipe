@@ -266,11 +266,24 @@ footer img {
         width:768px;
         background-color: #fff;
     }
+    .hamburger nav {
+        width:100%;
+    }
     .hamburger ul {
         overflow:visible;
     }
     .hamburger ul li {
         display: inline;
+    }
+    .meals {
+        display:grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .hamburger svg {
+        position:absolute;
+    }
+    .hamburger img {
+        width:40%;
     }
     menu {
         background-color: rgba(242, 242, 242, 0.7);
