@@ -304,6 +304,12 @@ footer img {
     .hamburger {
         width: 1280px;
     }
+    .landing {
+        display: grid;
+        width:100%;
+        grid-template-columns: 1fr 4fr 5fr;
+    }
+
     menu {
         background-color: #fff;
         border:#EB5428 solid 3px;
@@ -315,8 +321,7 @@ footer img {
         display: flex;
     }
     #lrgTacos {
-        height: 935px;
-        width: 50%;
+        width: 100%;
     }
     #details {
         background-color: #000;
