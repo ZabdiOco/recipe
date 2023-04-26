@@ -3,6 +3,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Basic Layout */
 html {
     background-color: rgba(122, 191, 191, .5);
 }
@@ -14,9 +63,11 @@ body {
 h1, h2, h3 {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 h1 {
-    font-size: 40px;;
+    font-size: 40px;
 }
 h2 {
     font-size:30px;
@@ -29,32 +80,28 @@ nav a {
 }
 p {
     font-size:16px;
+    line-height: 1.5em;
 }
 dl {
-    background-color: greenyellow;
     width:50%;
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3px;
 }
 dt {
-    background-color:magenta;
     font-size:16px;
     width: max-content;
+    font-weight: 700;
 }
 dd {
-    background-color: aqua;
     font-size: 16px;
 }
 .hamburger {
     position: absolute;
-    margin-top: 0;
-}
-.hamburger ul li {
-    display: inline;
+    top:0;
+    z-index:1;
 }
 .hamburger svg, .hamburger img {
-    background-color: teal;
     width: 10%;
 }
 menu {
@@ -69,12 +116,28 @@ li a {
     color: #EB5428;
     font-family: 'Bebas Neue', cursive;
 }
+ol {
+    padding-left: 30px;
+}
+.search {
+    border:#EB5428 solid 3px;
+    width: 350px;
+    height: 50px;
+}
+.search h3 {
+    visibility: hidden;
+}
 #lrgTacos {
     width:100%;
+}
+#ingredients {
+    margin-left: 30px;
+    margin-top: 15px;
 }
 #ingredients li {
     list-style: square;
     line-height: 2em;
+    display: flexbox;
 }
 #dishes {
     background-color: #7ABFBF;
@@ -82,6 +145,9 @@ li a {
 #dishes section {
     display: flex;
     padding-bottom: 30px;
+}
+#social h2, #social h3 {
+    visibility: hidden;
 }
 footer {
     text-align: center;
@@ -91,4 +157,173 @@ footer {
 }
 footer img {
     width: 20%;
+}
+
+/*Small screen*/
+@media screen and (min-width:414px) {
+    body {
+        width: 414px;
+        margin: 0 auto;
+    }
+    header {
+        margin-top: 59px;
+        padding-bottom: 20px;
+    }
+    nav {
+        width: 414px;
+        position: absolute;
+        top: 0;
+        z-index:1;
+    }
+    nav ul {
+        text-align: center;
+    }
+    .hamburger h2 {
+        visibility: hidden;
+        height: 1px;
+    }
+    .hamburger ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    li a {
+        display: inline;
+        padding: 20px 20px;
+        text-decoration: none;
+    }
+    [href="#home"] {
+        position: absolute;
+        top: 0;
+        left: 90px;
+        padding: 16px 16px;
+    }
+    a:hover, input:hover {
+        background-color: #EB5428;
+        color:#fff;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
+        display: none;
+    }
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+}
+
+/*Medium screen*/
+@media screen and (min-width:768px) {
+    body {
+        width: 768px;
+    }
+    .hamburger {
+        width:768px;
+        background-color: #fff;
+    }
+    .hamburger ul {
+        overflow:visible;
+    }
+    .hamburger ul li {
+        display: inline;
+    }
+    menu {
+        background-color: rgba(242, 242, 242, 0.7);
+        position:relative;
+        top: 75px;
+        width: 768px;
+        height: 75px;
+    }
+    menu li {
+        padding-top: 15px;
+    }
+    dl {
+        margin: auto;
+    }
+    #ingredients {
+        width: 25%;
+    }
+    #directions {
+        width:75%;
+    }
+    #social {
+        right: 200px;
+    }
+    footer {
+        position:relative;
+    }
+}
+
+/*Large screen*/
+@media screen and (min-width:1280px) {
+    body {
+        width: 1280px;
+    }
+    .hamburger {
+        width: 1280px;
+    }
+    menu {
+        background-color: #fff;
+        border:#EB5428 solid 3px;
+        width: 100px;
+        height: 100%;
+        position: absolute;
+    }
+    menu li {
+        display: flex;
+    }
+    #lrgTacos {
+        height: 935px;
+        width: 50%;
+    }
+    #details {
+        background-color: #000;
+        color: #7ABFBF;
+        width: 1280px;
+    }
+    dl {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
