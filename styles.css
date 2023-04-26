@@ -130,6 +130,9 @@ ol {
 #lrgTacos {
     width:100%;
 }
+.intro {
+    padding-left: 10px;
+}
 #ingredients {
     margin-left: 30px;
     margin-top: 15px;
@@ -282,11 +285,10 @@ footer img {
     dl {
         margin: auto;
     }
-    #ingredients {
-        width: 25%;
-    }
-    #directions {
-        width:75%;
+    .steps {
+        display:grid;
+        width:100%;
+        grid-template-columns: 1.5fr 3fr;
     }
     #social {
         right: 200px;
@@ -315,16 +317,12 @@ footer img {
     menu {
         background-color: #fff;
         position: absolute;
-        width:128px;
+        width:10%;
+        height:100%;
         border:#EB5428 solid 3px;
     }
     menu li {
         display: flex;
-    }
-    .steps {
-        display:grid;
-        width:100%;
-        grid-template-columns: 1.5fr 3fr;
     }
     #lrgTacos {
         width: 100%;
