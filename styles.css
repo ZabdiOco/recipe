@@ -140,7 +140,6 @@ ol {
 #ingredients li {
     list-style: square;
     line-height: 2em;
-    display: flexbox;
 }
 #dishes {
     background-color: #7ABFBF;
