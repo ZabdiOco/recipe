@@ -151,6 +151,8 @@ ol {
 }
 #social h2, #social h3 {
     visibility: hidden;
+    height:0;
+    width:0;
 }
 footer {
     text-align: center;
@@ -159,7 +161,8 @@ footer {
     font-size:20px;
 }
 footer img {
-    width: 20%;
+    padding-bottom:20px;
+    width: 50%;
 }
 
 /*Small screen*/
@@ -254,6 +257,38 @@ footer img {
     }
     input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
+    }
+    .steps {
+        margin-bottom: 20px;
+    }
+    #dishes {
+        padding-left: 10px;
+        height:min-content;
+    }
+    #dishes img {
+        width: 25%;
+        height: 25%;
+    }
+    .dishgrid h3 {
+        font-weight: 700;
+    }
+    .dishgrid h3, .dishgrid p {
+        text-align: left;
+        line-height: .25em;
+    }
+    .dishgrid {
+        width:100%;
+        padding-left: 20px;
+        display:grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #social ul{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 30px;
+    }
+    #social a{
+        text-align: center;
     }
 }
 
