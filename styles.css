@@ -258,8 +258,15 @@ footer img {
     input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
         top: 0;
     }
+    .icon-tabler:hover {
+        fill:#fff;
+        background-color:#EB5428
+    }
     .steps {
         margin-bottom: 20px;
+    }
+    #details dl {
+        margin-left: 10px;
     }
     #dishes {
         padding-left: 10px;
@@ -330,13 +337,16 @@ footer img {
     menu li {
         padding-top: 15px;
     }
-    dl {
-        margin: auto;
+    #details dl {
+        margin:auto;
     }
     .steps {
         display:grid;
         width:100%;
         grid-template-columns: 1.5fr 3fr;
+    }
+    .steps #directions {
+        margin-top:15px;
     }
     #social {
         right: 200px;
