@@ -347,6 +347,24 @@ footer img {
     }
     .steps #directions {
         margin-top:15px;
+        margin-right:20px;
+    }
+    .dishcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    #dishes img {
+        width: 50%;
+        height:50%;
+    }
+    .dishgrid p {
+        line-height: 1em;
+    }
+    .maincourses {
+        display: flex;
     }
     #social {
         right: 200px;
@@ -392,5 +410,15 @@ footer img {
     }
     dl {
         grid-template-columns: repeat(5, 1fr);
+    }
+    .dishcontainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #dishes img {
+        width: 70%;
+        height: 70%;
+    }
+    .dishgrid {
+        grid-template-rows: repeat(3, 1fr);
     }
 }
