@@ -124,8 +124,16 @@ ol li {
 }
 .search {
     border:#EB5428 solid 3px;
-    width: 350px;
-    height: 50px;
+    background-color: #fff;
+    width: 250px;
+    height: 30%;
+    position:absolute;
+    top:50px;
+}
+.search svg {
+    background-color: #EB5428;
+    fill:#fff;
+    stroke:#fff;
 }
 .search h3 {
     visibility: hidden;
@@ -367,6 +375,9 @@ footer img {
     }
     .maincourses {
         display: flex;
+    }
+    .search svg {
+        position:static;
     }
     #social {
         right: 200px;
