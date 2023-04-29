@@ -63,11 +63,12 @@ body {
 h1, h2, h3 {
     font-family: 'Bebas Neue', cursive;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 h1 {
     font-size: 40px;
+    margin-top:85px;
 }
 h2 {
     font-size:30px;
@@ -390,6 +391,9 @@ footer img {
     }
     footer {
         position:relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 40px;
     }
 }
 
@@ -440,5 +444,12 @@ footer img {
     }
     .dishgrid {
         grid-template-rows: repeat(3, 1fr);
+    }
+    footer {
+        height: 40%;
+    }
+    .copyright {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
