@@ -327,9 +327,9 @@ footer img {
     .hamburger ul li {
         display: inline;
     }
-    .meals {
+    #navigation {
         display:grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(9, 1fr);
     }
     .hamburger svg {
         position:absolute;
