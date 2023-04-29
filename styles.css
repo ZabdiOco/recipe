@@ -159,6 +159,12 @@ ol li {
     display: flex;
     padding-bottom: 30px;
 }
+.checked {
+    fill:#EB5428;
+}
+.dishgrid p:nth-child(odd) {
+    font-weight:700;
+}
 #social h2, #social h3 {
     visibility: hidden;
     height:0;
